@@ -1,13 +1,40 @@
-// arrays 
+//literals
 
-let array:number[] = [1,2,3,4,5] //defining the array
+let directions: "north" | "south";
 
-//tuples
+let responseCode: 200 | 404 | 202 | 500; 
 
-const cord:[number,string] = [1,"puneeth"]//to specify the type of each element
-console.log(cord[1])
+//these tells that the value you are going to asign to the variable within those values which you have specified
+//if u try to asign a any other value it will give error
+//eg
+//responseCode = 600
 
 
+
+//enums
+
+enum SIze {
+    Small = 100,
+    Medium = 200,
+    Large
+}
+
+var size:SIze = SIze.Small;
+
+if(size === SIze.Small){
+
+}
+
+//string enums
+
+enum Direction {
+    up = "UP",
+    down = "DOWN",
+    left = "LEFT",
+    right = "RIGHT"
+}
+
+console.log(Direction.down)
 
 
 
