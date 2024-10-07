@@ -1,42 +1,13 @@
-//literals
+//any type if we dont want a type check
 
-let directions: "north" | "south";
+let x:any = 1
 
-let responseCode: 200 | 404 | 202 | 500; 
+//unknown type when we dont know the type
 
-//these tells that the value you are going to asign to the variable within those values which you have specified
-//if u try to asign a any other value it will give error
-//eg
-//responseCode = 600
+let y:unknown = 1
 
-
-
-//enums
-
-enum SIze {
-    Small = 100,
-    Medium = 200,
-    Large
+if(typeof y === "number"){
+    const res = x + 1
+} else if(typeof y === "string"){
+    const res = y.length
 }
-
-var size:SIze = SIze.Small;
-
-if(size === SIze.Small){
-
-}
-
-//string enums
-
-enum Direction {
-    up = "UP",
-    down = "DOWN",
-    left = "LEFT",
-    right = "RIGHT"
-}
-
-console.log(Direction.down)
-
-
-
-
-
