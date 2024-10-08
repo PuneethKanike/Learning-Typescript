@@ -1,7 +1,10 @@
 "use strict";
-// types in functions
-function add(x, y) {
-    return x + y;
-}
-const res = add(1, 2);
-console.log(res);
+//interfaces in typescript
+const person = {
+    name: "pueeth",
+    age: 12,
+    hello: function () {
+        console.log(this.name + " hi");
+    }
+};
+person.hello();

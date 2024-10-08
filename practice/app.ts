@@ -1,16 +1,31 @@
-// types in functions
+//interfaces in typescript
 
-function add(x:number,y:number): number | string {  //we add number | string to return only from on of them
-    return x+y
+interface Person{
+    name:string,
+    age:number,
+    height?: number,
+    // hello: ()=> void
 }
 
-const res = add(1,2)
-console.log(res)
+// const person : Person = {
+//     name : "puneeth",
+//     age : 12,
+//     hello: function(){
+//         console.log(this.name + " hi")
+//     }
+// }
 
+// person.hello()
 
-
-function makeName (fname:string, lname:string, mname?:string){  // we added the ? mark fot the mname specifiing that that mname is a optional one
-    
+interface Employee extends Person {
+    employeeId : number
 }
 
-makeName("puneeth","kanike")
+const worker :Employee = {
+    name:"p",
+    age:23,
+    height:175,
+    employeeId:10
+}
+
+
